@@ -4,7 +4,7 @@
 
 # Linux
 resource "azurerm_virtual_machine_extension" "vm_linux" {
-  count = var.custom_script_extension.name && var.custom_script_extension.script && local.is_linux ? var.instances : 0
+  count = var.custom_script_extension.enabled && local.is_linux ? var.instances : 0
 
   name                 = var.custom_script_extension.name
   virtual_machine_id   = azurerm_linux_virtual_machine.vm[count.index].id
@@ -21,7 +21,7 @@ SETTINGS
 
 # Windows
 resource "azurerm_virtual_machine_extension" "vm_windows" {
-  count = var.custom_script_extension.name && var.custom_script_extension.script && local.is_linux != true ? var.instances : 0
+  count = var.custom_script_extension.enabled && local.is_linux != true ? var.instances : 0
 
   name                 = var.custom_script_extension.name
   virtual_machine_id   = azurerm_windows_virtual_machine.vm[count.index].id

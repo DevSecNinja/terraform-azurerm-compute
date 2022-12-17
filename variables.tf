@@ -178,6 +178,7 @@ variable "load_balancer_is_public" {
 variable "custom_script_extension" {
   description = "Installs the specified custom script extension. Script should be a base64encoded string"
   default = {
+    enabled = false
     name = null
     script = null
   }
