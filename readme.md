@@ -47,7 +47,7 @@ module "k3s" {
 }
 ````
 
-## Note
+## 📝 Note
 
 After I built this module, I discovered that there is also a [nice module created by the Azure team](https://github.com/Azure/terraform-azurerm-compute).
 
@@ -63,7 +63,7 @@ This project is licensed under the MIT License. It is not affiliated with my emp
 
 Feel free to use and modify the code as you see fit 🎉
 
-## Terraform Documentation
+## 📄 Terraform Documentation
 
 I'm using `terraform-docs` to update my documentation automatically:
 
