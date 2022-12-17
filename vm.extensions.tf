@@ -29,11 +29,11 @@ resource "azurerm_virtual_machine_extension" "vm_windows" {
   type                 = "CustomScriptExtension"
   type_handler_version = "1.10"
 
-  protected_settings  = <<PROTECTEDSETTINGS
+  protected_settings  = <<SETTINGS
     {
         "commandToExecute": "powershell -ExecutionPolicy Unrestricted -encodedCommand ${var.custom_script_extension.script}"
     }
-PROTECTEDSETTINGS
+SETTINGS
 }
 
 # Azure Virtual Desktop
