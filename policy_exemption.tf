@@ -16,7 +16,7 @@ resource "azurerm_resource_group_policy_exemption" "backup" {
   count = var.disable_backup ? 0 : 1
 
   name                 = "DisableBackups"
-  display_name         = "Disable backups on VMs in the '${azurerm_resource_group.vm_rg}' Resource Group"
+  display_name         = "Disable backups on VMs in the '${azurerm_resource_group.vm_rg.name}' Resource Group"
   resource_group_id    = azurerm_resource_group.vm_rg.id
   policy_assignment_id = "/providers/microsoft.management/managementgroups/${var.config.generic.org.root_id}-landing-zones/providers/microsoft.authorization/policyassignments/deploy-vm-backup"
   exemption_category   = "Waiver"
