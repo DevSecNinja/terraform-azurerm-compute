@@ -105,11 +105,6 @@ variable "instances" {
   }
 }
 
-variable "install_docker" {
-  description = "Installs Docker and Docker-Compose"
-  default     = false
-}
-
 variable "tags" {
   type    = map(string)
   default = {}
@@ -178,4 +173,12 @@ variable "load_balancer_health_probe_port" {
 variable "load_balancer_is_public" {
   description = "If true, a Public IP address will be created and associated"
   default     = false
+}
+
+variable "custom_script_extension" {
+  description = "Installs the specified custom script extension. Script should be a base64encoded string"
+  default = {
+    name = null
+    script = null
+  }
 }
