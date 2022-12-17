@@ -121,6 +121,7 @@ No modules.
 | [azurerm_security_center_server_vulnerability_assessment_virtual_machine.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_server_vulnerability_assessment_virtual_machine) | resource |
 | [azurerm_virtual_machine_data_disk_attachment.data_01](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_data_disk_attachment) | resource |
 | [azurerm_virtual_machine_data_disk_attachment.shared_01](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_data_disk_attachment) | resource |
+| [azurerm_virtual_machine_extension.avd](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
 | [azurerm_virtual_machine_extension.domain_join_azuread](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
 | [azurerm_virtual_machine_extension.vm_amaagent](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
 | [azurerm_virtual_machine_extension.vm_linux](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
@@ -135,6 +136,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_avd_extension"></a> [avd\_extension](#input\_avd\_extension) | Installs the Azure Virtual Desktop extension | `map` | <pre>{<br>  "aadJoin": true,<br>  "enabled": false,<br>  "hostPoolName": null,<br>  "registrationInfoToken": null<br>}</pre> | no |
 | <a name="input_config"></a> [config](#input\_config) | Provide the decoded data from the files in generic/json/config | `any` | n/a | yes |
 | <a name="input_custom_data"></a> [custom\_data](#input\_custom\_data) | Base64encoded string of the custom data config | `string` | `null` | no |
 | <a name="input_custom_script_extension"></a> [custom\_script\_extension](#input\_custom\_script\_extension) | Installs the specified custom script extension. Script should be a base64encoded string | `map` | <pre>{<br>  "enabled": false,<br>  "name": null,<br>  "script": null<br>}</pre> | no |
