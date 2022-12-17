@@ -73,6 +73,6 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   depends_on = [
     azurerm_resource_group_policy_exemption.backup,
-    time_sleep.wait_30_seconds # Needed for the policy exemption to become active
+    time_sleep.wait_60_seconds # Needed for the policy exemption to become active
   ]
 }
