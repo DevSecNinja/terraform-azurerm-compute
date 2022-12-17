@@ -183,3 +183,13 @@ variable "custom_script_extension" {
     script = null
   }
 }
+
+variable "avd_extension" {
+  description = "Installs the Azure Virtual Desktop extension"
+  default = {
+    enabled = false
+    hostPoolName = null
+    aadJoin = true
+    registrationInfoToken = null
+  }
+}
