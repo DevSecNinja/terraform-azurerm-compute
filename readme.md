@@ -53,7 +53,7 @@ After I built this module, I discovered that there is also a [nice module create
 
 ## 🤝 Contributions
 
-I welcome contributions to this project! If you have an idea for a feature or improvement, please open an issue or pull request.
+I welcome contributions to this project! If you have an idea for a feature or improvement, please open an issue or pull request. If you find this project helpful, I would also appreciate it if you could leave a star on the GitHub repository 🌟
 
 Thank you for considering contributing 🙏
 
