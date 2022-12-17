@@ -16,7 +16,7 @@ To use this module, you will need to have an Azure account and access to the Azu
 
 ```` terraform
 module "k3s" {
-  source = "DevSecNinja/terraform-azurerm-compute?ref=v1.0.0"
+  source = "github.com/DevSecNinja/terraform-azurerm-compute?ref=v1.0.0"
 
   ### Important
   instances = 3
