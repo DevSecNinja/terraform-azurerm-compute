@@ -19,7 +19,7 @@ resource "azurerm_network_interface" "vm_nic" {
   }
 
   depends_on = [
-    var.enable_ip_forwarding ? time_sleep.wait_60_seconds : null # Needed for the policy exemption to become active
+    time_sleep.wait_60_seconds # Needed for the policy exemption to become active
   ]
 }
 
