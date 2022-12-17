@@ -49,7 +49,7 @@ module "k3s" {
 
 ## 📝 Note
 
-After I built this module, I discovered that there is also a [nice module created by the Azure team](https://github.com/Azure/terraform-azurerm-compute).
+After I built this module, I discovered that there is also a [nice module created by the Azure team](https://github.com/Azure/terraform-azurerm-compute) which is officially supported by Microsoft. You might want to start with that one first.
 
 ## 🤝 Contributions
 
