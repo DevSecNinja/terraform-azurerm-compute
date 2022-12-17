@@ -121,7 +121,8 @@ No modules.
 | [azurerm_security_center_server_vulnerability_assessment_virtual_machine.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_server_vulnerability_assessment_virtual_machine) | resource |
 | [azurerm_virtual_machine_data_disk_attachment.data_01](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_data_disk_attachment) | resource |
 | [azurerm_virtual_machine_data_disk_attachment.shared_01](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_data_disk_attachment) | resource |
-| [azurerm_virtual_machine_extension.docker](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
+| [azurerm_virtual_machine_extension.vm_linux](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
+| [azurerm_virtual_machine_extension.vm_windows](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
 | [azurerm_virtual_machine_extension.domain_join_azuread](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
 | [azurerm_virtual_machine_extension.vm_amaagent](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
 | [azurerm_windows_virtual_machine.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_virtual_machine) | resource |
@@ -146,7 +147,6 @@ No modules.
 | <a name="input_dns_host_record"></a> [dns\_host\_record](#input\_dns\_host\_record) | DNS Host record will only be set when deploying a public IP address | `bool` | `false` | no |
 | <a name="input_enable_ip_forwarding"></a> [enable\_ip\_forwarding](#input\_enable\_ip\_forwarding) | n/a | `bool` | `false` | no |
 | <a name="input_enable_jit"></a> [enable\_jit](#input\_enable\_jit) | Enables Just-in-Time Administration | `bool` | `false` | no |
-| <a name="input_install_docker"></a> [install\_docker](#input\_install\_docker) | Installs Docker and Docker-Compose | `bool` | `false` | no |
 | <a name="input_install_oms_agent"></a> [install\_oms\_agent](#input\_install\_oms\_agent) | Installs the OMS Agent | `bool` | `false` | no |
 | <a name="input_instances"></a> [instances](#input\_instances) | Specify the number of VM instances | `number` | `1` | no |
 | <a name="input_join_in_aad"></a> [join\_in\_aad](#input\_join\_in\_aad) | Joins the machine in Azure Active Directory | `bool` | `true` | no |
