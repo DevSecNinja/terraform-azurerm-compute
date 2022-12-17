@@ -10,7 +10,7 @@ This Terraform module allows you to easily create one or more Virtual Machines (
 
 ## 🔧 Usage
 
-To use this module, you will need to have an Azure account and access to the Azure CLI with Terraform installed.
+To use this module, you will need to have an Azure account and access to the Azure CLI with Terraform installed. I heavily rely on the [terraform-azurerm-caf-enterprise-scale](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and the [terraform-azurerm-lz-vending](https://github.com/Azure/terraform-azurerm-lz-vending) modules, hence some of the references to e.g. the management & connectivity subscriptions.
 
 > **_NOTE:_** I always suggest to use the `ref` argument to select a specific version.
 
@@ -40,9 +40,9 @@ module "k3s" {
   deploy_load_balancer     = true
 
   providers = {
-    azurerm              = azurerm.jeanpaulv-lz-corp-gen
-    azurerm.management   = azurerm.management
-    azurerm.connectivity = azurerm.connectivity
+    azurerm              = azurerm.lz-corp-gen # To deploy your resources
+    azurerm.management   = azurerm.management # To access the Log Analytics workspace
+    azurerm.connectivity = azurerm.connectivity # To create a DNS record
   }
 }
 ````
