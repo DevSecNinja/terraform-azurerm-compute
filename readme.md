@@ -10,7 +10,8 @@ This Terraform module allows you to easily create one or more Virtual Machines (
 
 ## 🔧 Usage
 
-To use this module, you will need to have an Azure account and access to the Azure CLI with Terraform installed. I heavily rely on the [terraform-azurerm-caf-enterprise-scale](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and the [terraform-azurerm-lz-vending](https://github.com/Azure/terraform-azurerm-lz-vending) modules, hence some of the references to e.g. the management & connectivity subscriptions.
+To use this module, you will need to have an Azure account and access to the Azure CLI with Terraform installed.
+I heavily rely on the [terraform-azurerm-caf-enterprise-scale](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and the [terraform-azurerm-lz-vending](https://github.com/Azure/terraform-azurerm-lz-vending) modules, hence some of the references to e.g. the management & connectivity subscriptions.
 
 > **_NOTE:_** I always suggest to use the `ref` argument to select a specific version.
 
@@ -49,7 +50,7 @@ module "k3s" {
 
 ## 📝 Note
 
-After I built this module, I discovered that there is also a [nice module created by the Azure team](https://github.com/Azure/terraform-azurerm-compute).
+After I built this module, I discovered that there is also a [nice module created by the Azure team](https://github.com/Azure/terraform-azurerm-compute) which is officially supported by Microsoft. You might want to start with that one first.
 
 ## 🤝 Contributions
 
@@ -84,7 +85,6 @@ I'm using `terraform-docs` to update my documentation automatically:
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 3.29.1 |
 | <a name="provider_azurerm.connectivity"></a> [azurerm.connectivity](#provider\_azurerm.connectivity) | >= 3.29.1 |
 | <a name="provider_azurerm.management"></a> [azurerm.management](#provider\_azurerm.management) | >= 3.29.1 |
-| <a name="provider_local"></a> [local](#provider\_local) | n/a |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.4.3 |
 | <a name="provider_time"></a> [time](#provider\_time) | n/a |
 
@@ -121,16 +121,15 @@ No modules.
 | [azurerm_security_center_server_vulnerability_assessment_virtual_machine.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_server_vulnerability_assessment_virtual_machine) | resource |
 | [azurerm_virtual_machine_data_disk_attachment.data_01](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_data_disk_attachment) | resource |
 | [azurerm_virtual_machine_data_disk_attachment.shared_01](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_data_disk_attachment) | resource |
-| [azurerm_virtual_machine_extension.vm_linux](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
-| [azurerm_virtual_machine_extension.vm_windows](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
 | [azurerm_virtual_machine_extension.domain_join_azuread](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
 | [azurerm_virtual_machine_extension.vm_amaagent](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
+| [azurerm_virtual_machine_extension.vm_linux](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
+| [azurerm_virtual_machine_extension.vm_windows](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension) | resource |
 | [azurerm_windows_virtual_machine.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_virtual_machine) | resource |
 | [random_password.vm_password](https://registry.terraform.io/providers/hashicorp/random/3.4.3/docs/resources/password) | resource |
 | [time_sleep.wait_60_seconds](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/sleep) | resource |
 | [azurerm_client_config.core](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
 | [azurerm_log_analytics_workspace.law](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/log_analytics_workspace) | data source |
-| [local_file.install_docker](https://registry.terraform.io/providers/hashicorp/local/latest/docs/data-sources/file) | data source |
 
 ## Inputs
 
@@ -138,6 +137,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_config"></a> [config](#input\_config) | Provide the decoded data from the files in generic/json/config | `any` | n/a | yes |
 | <a name="input_custom_data"></a> [custom\_data](#input\_custom\_data) | Base64encoded string of the custom data config | `string` | `null` | no |
+| <a name="input_custom_script_extension"></a> [custom\_script\_extension](#input\_custom\_script\_extension) | Installs the specified custom script extension. Script should be a base64encoded string | `map` | <pre>{<br>  "enabled": false,<br>  "name": null,<br>  "script": null<br>}</pre> | no |
 | <a name="input_data_disk_caching"></a> [data\_disk\_caching](#input\_data\_disk\_caching) | Specify the caching setting for the data disk | `string` | `"ReadWrite"` | no |
 | <a name="input_data_disk_size"></a> [data\_disk\_size](#input\_data\_disk\_size) | Deploys a data disk if size is >0 | `number` | `0` | no |
 | <a name="input_deploy_in_availability_set"></a> [deploy\_in\_availability\_set](#input\_deploy\_in\_availability\_set) | Instead of using Availability Zones (99.99% SLA - DC failure protection), the VMs will be deployed in an Availability Set (99.9% SLA - 'rack failure' protection). | `bool` | `false` | no |
