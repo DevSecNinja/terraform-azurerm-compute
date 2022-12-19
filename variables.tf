@@ -173,7 +173,7 @@ variable "shared_disk_type" {
   description = "Specify the disk type for the shared disk"
   default     = "StandardSSD_LRS"
   validation {
-    condition     = contains(["Standard_LRS", "StandardSSD_ZRS", "Premium_LRS", "PremiumV2_LRS", "Premium_ZRS", "StandardSSD_LRS", "UltraSSD_LRS"], var.data_disk_type)
+    condition     = contains(["Standard_LRS", "StandardSSD_ZRS", "Premium_LRS", "PremiumV2_LRS", "Premium_ZRS", "StandardSSD_LRS", "UltraSSD_LRS"], var.shared_disk_type)
     error_message = "Provide a valid value."
   }
 }
