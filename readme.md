@@ -142,6 +142,7 @@ No modules.
 | <a name="input_custom_script_extension"></a> [custom\_script\_extension](#input\_custom\_script\_extension) | Installs the specified custom script extension. Script should be a base64encoded string | `map` | <pre>{<br>  "enabled": false,<br>  "name": null,<br>  "script": null<br>}</pre> | no |
 | <a name="input_data_disk_caching"></a> [data\_disk\_caching](#input\_data\_disk\_caching) | Specify the caching setting for the data disk | `string` | `"ReadWrite"` | no |
 | <a name="input_data_disk_size"></a> [data\_disk\_size](#input\_data\_disk\_size) | Deploys a data disk if size is >0 | `number` | `0` | no |
+| <a name="input_data_disk_type"></a> [data\_disk\_type](#input\_data\_disk\_type) | Specify the disk type for the data disk | `string` | `"StandardSSD_LRS"` | no |
 | <a name="input_deploy_in_availability_set"></a> [deploy\_in\_availability\_set](#input\_deploy\_in\_availability\_set) | Instead of using Availability Zones (99.99% SLA - DC failure protection), the VMs will be deployed in an Availability Set (99.9% SLA - 'rack failure' protection). | `bool` | `false` | no |
 | <a name="input_deploy_load_balancer"></a> [deploy\_load\_balancer](#input\_deploy\_load\_balancer) | Deploys a load balancer and adds the network interfaces to the backend pool | `bool` | `false` | no |
 | <a name="input_deploy_public_ip_address"></a> [deploy\_public\_ip\_address](#input\_deploy\_public\_ip\_address) | n/a | `bool` | `false` | no |
@@ -159,6 +160,7 @@ No modules.
 | <a name="input_purpose"></a> [purpose](#input\_purpose) | Purpose is used in the naming of the VM | `any` | n/a | yes |
 | <a name="input_shared_data_disk_size"></a> [shared\_data\_disk\_size](#input\_shared\_data\_disk\_size) | Deploys a shared data disk if size is >0 | `number` | `0` | no |
 | <a name="input_shared_disk_caching"></a> [shared\_disk\_caching](#input\_shared\_disk\_caching) | Specify the caching setting for the shared disk | `string` | `"ReadWrite"` | no |
+| <a name="input_shared_disk_type"></a> [shared\_disk\_type](#input\_shared\_disk\_type) | Specify the disk type for the shared disk | `string` | `"StandardSSD_LRS"` | no |
 | <a name="input_shutdown_policy_enabled"></a> [shutdown\_policy\_enabled](#input\_shutdown\_policy\_enabled) | n/a | `string` | `"true"` | no |
 | <a name="input_source_image_reference"></a> [source\_image\_reference](#input\_source\_image\_reference) | n/a | `map(string)` | <pre>{<br>  "offer": null,<br>  "publisher": null,<br>  "sku": null,<br>  "version": null<br>}</pre> | no |
 | <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | Provide the ID of the subnet that the VM should use | `any` | n/a | yes |
