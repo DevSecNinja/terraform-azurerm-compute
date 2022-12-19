@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"hashicorp.terraform",
+		"davidanson.vscode-markdownlint",
+		"eamodio.gitlens",
+		"ms-azuretools.vscode-azureterraform",
+		"azapi-vscode.azapi"
+	]
+}

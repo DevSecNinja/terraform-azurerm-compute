@@ -137,6 +137,15 @@ variable "data_disk_caching" {
   }
 }
 
+variable "data_disk_type" {
+  description = "Specify the disk type for the data disk"
+  default     = "StandardSSD_LRS"
+  validation {
+    condition     = contains(["Standard_LRS", "StandardSSD_ZRS", "Premium_LRS", "PremiumV2_LRS", "Premium_ZRS", "StandardSSD_LRS", "UltraSSD_LRS"], var.data_disk_type)
+    error_message = "Provide a valid value."
+  }
+}
+
 variable "disable_backup" {
   description = "Requests a policy exemption for backups on the VM in the Resource Group"
   default     = false
@@ -160,6 +169,15 @@ variable "shared_disk_caching" {
   }
 }
 
+variable "shared_disk_type" {
+  description = "Specify the disk type for the shared disk"
+  default     = "StandardSSD_LRS"
+  validation {
+    condition     = contains(["Standard_LRS", "StandardSSD_ZRS", "Premium_LRS", "PremiumV2_LRS", "Premium_ZRS", "StandardSSD_LRS", "UltraSSD_LRS"], var.shared_disk_type)
+    error_message = "Provide a valid value."
+  }
+}
+
 variable "deploy_load_balancer" {
   description = "Deploys a load balancer and adds the network interfaces to the backend pool"
   default     = false
@@ -179,17 +197,17 @@ variable "custom_script_extension" {
   description = "Installs the specified custom script extension. Script should be a base64encoded string"
   default = {
     enabled = false
-    name = null
-    script = null
+    name    = null
+    script  = null
   }
 }
 
 variable "avd_extension" {
   description = "Installs the Azure Virtual Desktop extension"
   default = {
-    enabled = false
-    hostPoolName = null
-    aadJoin = true
+    enabled               = false
+    hostPoolName          = null
+    aadJoin               = true
     registrationInfoToken = null
   }
 }
