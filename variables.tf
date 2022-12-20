@@ -211,3 +211,18 @@ variable "avd_extension" {
     registrationInfoToken = null
   }
 }
+
+variable "shutdown_schedule" {
+  description = "Installs the Azure DevTest VM Shutdown Schedule"
+  default = {
+    enabled               = false
+    daily_recurrence_time = null
+    timezone              = null
+    notification_settings {
+      enabled         = false
+      time_in_minutes = null
+      webhook_url     = null
+      mail            = null
+    }
+  }
+}
