@@ -176,6 +176,8 @@ No modules.
 | <a name="output_vm"></a> [vm](#output\_vm) | n/a |
 | <a name="output_vm_identity"></a> [vm\_identity](#output\_vm\_identity) | n/a |
 | <a name="output_vm_lb"></a> [vm\_lb](#output\_vm\_lb) | n/a |
+| <a name="output_vm_lb_pip"></a> [vm\_lb\_pip](#output\_vm\_lb\_pip) | n/a |
 | <a name="output_vm_nic"></a> [vm\_nic](#output\_vm\_nic) | n/a |
+| <a name="output_vm_pip"></a> [vm\_pip](#output\_vm\_pip) | n/a |
 | <a name="output_vm_rg"></a> [vm\_rg](#output\_vm\_rg) | n/a |
 <!-- END_TF_DOCS -->
