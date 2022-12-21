@@ -17,7 +17,8 @@ I heavily rely on the [terraform-azurerm-caf-enterprise-scale](https://github.co
 
 ```` terraform
 module "k3s" {
-  source = "github.com/DevSecNinja/terraform-azurerm-compute?ref=v1.0.0"
+  source  = "DevSecNinja/compute/azurerm"
+  # version = "x.y.z" # Copy from Terraform registry
 
   ### Important
   instances = 3
