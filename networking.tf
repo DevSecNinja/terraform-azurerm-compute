@@ -74,10 +74,10 @@ resource "azurerm_network_interface_backend_address_pool_association" "vm" {
   backend_address_pool_id = azurerm_lb_backend_address_pool.vm[0].id
 }
 
-resource "azurerm_lb_probe" "ssh-inbound-probe" {
+resource "azurerm_lb_probe" "lb-probe" {
   count = var.deploy_load_balancer == true ? 1 : 0
 
   loadbalancer_id = azurerm_lb.vm[0].id
-  name            = local.is_linux ? "ssh-inbound-probe" : "rdp-inbound-probe"
+  name            = "lb-inbound-probe"
   port            = var.load_balancer_health_probe_port > 0 ? var.load_balancer_health_probe_port : local.is_linux ? 22 : 3389
 }
