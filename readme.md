@@ -107,7 +107,7 @@ No modules.
 | [azurerm_dns_a_record.vm_pip](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_a_record) | resource |
 | [azurerm_lb.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb) | resource |
 | [azurerm_lb_backend_address_pool.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb_backend_address_pool) | resource |
-| [azurerm_lb_probe.ssh-inbound-probe](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb_probe) | resource |
+| [azurerm_lb_probe.lb_probe](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb_probe) | resource |
 | [azurerm_linux_virtual_machine.vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine) | resource |
 | [azurerm_managed_disk.data_01](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/managed_disk) | resource |
 | [azurerm_managed_disk.shared_01](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/managed_disk) | resource |
@@ -178,6 +178,7 @@ No modules.
 | <a name="output_vm_identity"></a> [vm\_identity](#output\_vm\_identity) | n/a |
 | <a name="output_vm_lb"></a> [vm\_lb](#output\_vm\_lb) | n/a |
 | <a name="output_vm_lb_pip"></a> [vm\_lb\_pip](#output\_vm\_lb\_pip) | n/a |
+| <a name="output_vm_lb_probe"></a> [vm\_lb\_probe](#output\_vm\_lb\_probe) | n/a |
 | <a name="output_vm_nic"></a> [vm\_nic](#output\_vm\_nic) | n/a |
 | <a name="output_vm_pip"></a> [vm\_pip](#output\_vm\_pip) | n/a |
 | <a name="output_vm_rg"></a> [vm\_rg](#output\_vm\_rg) | n/a |

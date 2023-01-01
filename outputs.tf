@@ -25,3 +25,7 @@ output "vm_lb" {
 output "vm_lb_pip" {
   value = var.deploy_load_balancer && var.load_balancer_is_public == true ? azurerm_public_ip.lb_pip : null
 }
+
+output "vm_lb_probe" {
+  value = var.deploy_load_balancer ? azurerm_lb_probe.lb_probe : null
+}

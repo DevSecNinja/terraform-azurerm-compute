@@ -74,7 +74,7 @@ resource "azurerm_network_interface_backend_address_pool_association" "vm" {
   backend_address_pool_id = azurerm_lb_backend_address_pool.vm[0].id
 }
 
-resource "azurerm_lb_probe" "lb-probe" {
+resource "azurerm_lb_probe" "lb_probe" {
   count = var.deploy_load_balancer == true ? 1 : 0
 
   loadbalancer_id = azurerm_lb.vm[0].id
