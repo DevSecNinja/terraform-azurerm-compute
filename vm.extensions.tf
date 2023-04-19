@@ -49,11 +49,12 @@ resource "azurerm_virtual_machine_extension" "avd" {
 
   settings = <<-SETTINGS
     {
-      "modulesUrl": "${var.config.compute.virtualMachines.azure_virtual_desktop.config.agentUrl}",
+      "modulesUrl": "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration_01-19-2023.zip",
       "configurationFunction": "Configuration.ps1\\AddSessionHost",
       "properties": {
         "HostPoolName":"${var.avd_extension.hostPoolName}",
-        "aadJoin": ${var.avd_extension.aadJoin}
+        "aadJoin": ${var.avd_extension.aadJoin},
+        "mdmId": "${var.avd_extension.mdmId}"
       }
     }
 SETTINGS

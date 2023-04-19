@@ -209,5 +209,6 @@ variable "avd_extension" {
     hostPoolName          = null
     aadJoin               = true
     registrationInfoToken = null
+    mdmId                 = null
   }
 }
